@@ -1,0 +1,8 @@
+<form action="{% url 'client_list' client.id %}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>{{ client.client_text }}</h1></legend>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+</fieldset>
+</form>
